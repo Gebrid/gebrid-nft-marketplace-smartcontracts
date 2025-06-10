@@ -1,0 +1,24 @@
+{
+  "name": "@gebrid/lib-part",
+  "version": "0.1.3",
+  "description": "Solidity part library",
+  "files": [
+    "contracts",
+    "readme.md"
+  ],
+  "access": "public",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/gebrid/gebrid-protocol-contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "truffle",
+    "test"
+  ],
+  "author": "noname",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

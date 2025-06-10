@@ -1,0 +1,1771 @@
+{
+  "contractName": "LibDirectTransfer",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/LibDirectTransfer.sol\":\"LibDirectTransfer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@gebrid/lib-asset/contracts/LibAsset.sol\":{\"keccak256\":\"0x5d63bba4747a12a83c5628dba94bf56714b4dcf94f742ff28863034831061c8a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9826768c7f5c5423d9bbf49be50bd21ed2db5374ee47648150e50aa10e3c0151\",\"dweb:/ipfs/Qmex4xCv4MFRfCxMNZzzsKXYAFxbYWQRFsbaHiJfDTozYG\"]},\"project:/contracts/libraries/LibDirectTransfer.sol\":{\"keccak256\":\"0x67d1fc90456116cbe0b22032f430434b49aa4d858c6fa052187e1e3ad2397af0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://407e2c7b130e20b61c3fb9c32514caecba7aadc011028c7b97b66cba18408c22\",\"dweb:/ipfs/QmPmiRKJW7Mp8L4CLYQ6nU32CqrE98YvhbJeHpNZpYDJGj\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122072204ce2111d8ef0d417793f50ca1beea6e2b74650b864aa43ab9fcdeb222fbb64736f6c63430007060033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122072204ce2111d8ef0d417793f50ca1beea6e2b74650b864aa43ab9fcdeb222fbb64736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "109:1158:38:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "109:1158:38:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.7.6;\n\nimport \"@gebrid/lib-asset/contracts/LibAsset.sol\";\n\nlibrary LibDirectTransfer { //LibDirectTransfers\n    /*All buy parameters need for create buyOrder and sellOrder*/\n    struct Purchase {\n        address sellOrderMaker; //\n        uint256 sellOrderNftAmount;\n        bytes4 nftAssetClass;\n        bytes nftData;\n        uint256 sellOrderPaymentAmount;\n        address paymentToken;\n        uint256 sellOrderSalt;\n        uint sellOrderStart;\n        uint sellOrderEnd;\n        bytes4 sellOrderDataType;\n        bytes sellOrderData;\n        bytes sellOrderSignature;\n\n        uint256 buyOrderPaymentAmount;\n        uint256 buyOrderNftAmount;\n        bytes buyOrderData;\n    }\n\n    /*All accept bid parameters need for create buyOrder and sellOrder*/\n    struct AcceptBid {\n        address bidMaker; //\n        uint256 bidNftAmount;\n        bytes4 nftAssetClass;\n        bytes nftData;\n        uint256 bidPaymentAmount;\n        address paymentToken;\n        uint256 bidSalt;\n        uint bidStart;\n        uint bidEnd;\n        bytes4 bidDataType;\n        bytes bidData;\n        bytes bidSignature;\n\n        uint256 sellOrderPaymentAmount;\n        uint256 sellOrderNftAmount;\n        bytes sellOrderData;\n    }\n}\n",
+  "sourcePath": "/Users/kronas/WebstormProjects/gebrid-protocol-contracts/exchange/contracts/libraries/LibDirectTransfer.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/LibDirectTransfer.sol",
+    "exportedSymbols": {
+      "LibAsset": [
+        503
+      ],
+      "LibDirectTransfer": [
+        6081
+      ]
+    },
+    "id": 6082,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6017,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:38"
+      },
+      {
+        "absolutePath": "@gebrid/lib-asset/contracts/LibAsset.sol",
+        "file": "@gebrid/lib-asset/contracts/LibAsset.sol",
+        "id": 6018,
+        "nodeType": "ImportDirective",
+        "scope": 6082,
+        "sourceUnit": 504,
+        "src": "57:50:38",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 6081,
+        "linearizedBaseContracts": [
+          6081
+        ],
+        "name": "LibDirectTransfer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LibDirectTransfer.Purchase",
+            "id": 6049,
+            "members": [
+              {
+                "constant": false,
+                "id": 6020,
+                "mutability": "mutable",
+                "name": "sellOrderMaker",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "254:22:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6019,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "254:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6022,
+                "mutability": "mutable",
+                "name": "sellOrderNftAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "289:26:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6021,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "289:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6024,
+                "mutability": "mutable",
+                "name": "nftAssetClass",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "325:20:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                },
+                "typeName": {
+                  "id": 6023,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "325:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6026,
+                "mutability": "mutable",
+                "name": "nftData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "355:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6025,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "355:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6028,
+                "mutability": "mutable",
+                "name": "sellOrderPaymentAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "378:30:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6027,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "378:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6030,
+                "mutability": "mutable",
+                "name": "paymentToken",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "418:20:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6029,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "418:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6032,
+                "mutability": "mutable",
+                "name": "sellOrderSalt",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "448:21:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6031,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "448:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6034,
+                "mutability": "mutable",
+                "name": "sellOrderStart",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "479:19:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6033,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "479:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6036,
+                "mutability": "mutable",
+                "name": "sellOrderEnd",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "508:17:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6035,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "508:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6038,
+                "mutability": "mutable",
+                "name": "sellOrderDataType",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "535:24:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                },
+                "typeName": {
+                  "id": 6037,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "535:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6040,
+                "mutability": "mutable",
+                "name": "sellOrderData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "569:19:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6039,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "569:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6042,
+                "mutability": "mutable",
+                "name": "sellOrderSignature",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "598:24:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6041,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "598:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6044,
+                "mutability": "mutable",
+                "name": "buyOrderPaymentAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "633:29:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6043,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "633:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6046,
+                "mutability": "mutable",
+                "name": "buyOrderNftAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "672:25:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6045,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "672:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6048,
+                "mutability": "mutable",
+                "name": "buyOrderData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6049,
+                "src": "707:18:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6047,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "707:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Purchase",
+            "nodeType": "StructDefinition",
+            "scope": 6081,
+            "src": "228:504:38",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "LibDirectTransfer.AcceptBid",
+            "id": 6080,
+            "members": [
+              {
+                "constant": false,
+                "id": 6051,
+                "mutability": "mutable",
+                "name": "bidMaker",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "838:16:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6050,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "838:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6053,
+                "mutability": "mutable",
+                "name": "bidNftAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "867:20:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6052,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "867:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6055,
+                "mutability": "mutable",
+                "name": "nftAssetClass",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "897:20:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                },
+                "typeName": {
+                  "id": 6054,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "897:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6057,
+                "mutability": "mutable",
+                "name": "nftData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "927:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6056,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "927:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6059,
+                "mutability": "mutable",
+                "name": "bidPaymentAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "950:24:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6058,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "950:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6061,
+                "mutability": "mutable",
+                "name": "paymentToken",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "984:20:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 6060,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "984:7:38",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6063,
+                "mutability": "mutable",
+                "name": "bidSalt",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1014:15:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6062,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1014:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6065,
+                "mutability": "mutable",
+                "name": "bidStart",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1039:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6064,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1039:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6067,
+                "mutability": "mutable",
+                "name": "bidEnd",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1062:11:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6066,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1062:4:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6069,
+                "mutability": "mutable",
+                "name": "bidDataType",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1083:18:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                },
+                "typeName": {
+                  "id": 6068,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1083:6:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6071,
+                "mutability": "mutable",
+                "name": "bidData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1111:13:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6070,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1111:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6073,
+                "mutability": "mutable",
+                "name": "bidSignature",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1134:18:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6072,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1134:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6075,
+                "mutability": "mutable",
+                "name": "sellOrderPaymentAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1163:30:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6074,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1163:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6077,
+                "mutability": "mutable",
+                "name": "sellOrderNftAmount",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1203:26:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6076,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1203:7:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6079,
+                "mutability": "mutable",
+                "name": "sellOrderData",
+                "nodeType": "VariableDeclaration",
+                "scope": 6080,
+                "src": "1239:19:38",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 6078,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1239:5:38",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "AcceptBid",
+            "nodeType": "StructDefinition",
+            "scope": 6081,
+            "src": "811:454:38",
+            "visibility": "public"
+          }
+        ],
+        "scope": 6082,
+        "src": "109:1158:38"
+      }
+    ],
+    "src": "33:1235:38"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/libraries/LibDirectTransfer.sol",
+      "exportedSymbols": {
+        "LibAsset": [
+          503
+        ],
+        "LibDirectTransfer": [
+          6081
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 6017,
+        "name": "PragmaDirective",
+        "src": "33:22:38"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 504,
+          "absolutePath": "@gebrid/lib-asset/contracts/LibAsset.sol",
+          "file": "@gebrid/lib-asset/contracts/LibAsset.sol",
+          "scope": 6082,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6018,
+        "name": "ImportDirective",
+        "src": "57:50:38"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6081
+          ],
+          "name": "LibDirectTransfer",
+          "scope": 6082
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "LibDirectTransfer.Purchase",
+              "name": "Purchase",
+              "scope": 6081,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderMaker",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 6019,
+                    "name": "ElementaryTypeName",
+                    "src": "254:7:38"
+                  }
+                ],
+                "id": 6020,
+                "name": "VariableDeclaration",
+                "src": "254:22:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderNftAmount",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6021,
+                    "name": "ElementaryTypeName",
+                    "src": "289:7:38"
+                  }
+                ],
+                "id": 6022,
+                "name": "VariableDeclaration",
+                "src": "289:26:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "nftAssetClass",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes4",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes4",
+                      "type": "bytes4"
+                    },
+                    "id": 6023,
+                    "name": "ElementaryTypeName",
+                    "src": "325:6:38"
+                  }
+                ],
+                "id": 6024,
+                "name": "VariableDeclaration",
+                "src": "325:20:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "nftData",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6025,
+                    "name": "ElementaryTypeName",
+                    "src": "355:5:38"
+                  }
+                ],
+                "id": 6026,
+                "name": "VariableDeclaration",
+                "src": "355:13:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderPaymentAmount",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6027,
+                    "name": "ElementaryTypeName",
+                    "src": "378:7:38"
+                  }
+                ],
+                "id": 6028,
+                "name": "VariableDeclaration",
+                "src": "378:30:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "paymentToken",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 6029,
+                    "name": "ElementaryTypeName",
+                    "src": "418:7:38"
+                  }
+                ],
+                "id": 6030,
+                "name": "VariableDeclaration",
+                "src": "418:20:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderSalt",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6031,
+                    "name": "ElementaryTypeName",
+                    "src": "448:7:38"
+                  }
+                ],
+                "id": 6032,
+                "name": "VariableDeclaration",
+                "src": "448:21:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderStart",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6033,
+                    "name": "ElementaryTypeName",
+                    "src": "479:4:38"
+                  }
+                ],
+                "id": 6034,
+                "name": "VariableDeclaration",
+                "src": "479:19:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderEnd",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6035,
+                    "name": "ElementaryTypeName",
+                    "src": "508:4:38"
+                  }
+                ],
+                "id": 6036,
+                "name": "VariableDeclaration",
+                "src": "508:17:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderDataType",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes4",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes4",
+                      "type": "bytes4"
+                    },
+                    "id": 6037,
+                    "name": "ElementaryTypeName",
+                    "src": "535:6:38"
+                  }
+                ],
+                "id": 6038,
+                "name": "VariableDeclaration",
+                "src": "535:24:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderData",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6039,
+                    "name": "ElementaryTypeName",
+                    "src": "569:5:38"
+                  }
+                ],
+                "id": 6040,
+                "name": "VariableDeclaration",
+                "src": "569:19:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderSignature",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6041,
+                    "name": "ElementaryTypeName",
+                    "src": "598:5:38"
+                  }
+                ],
+                "id": 6042,
+                "name": "VariableDeclaration",
+                "src": "598:24:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "buyOrderPaymentAmount",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6043,
+                    "name": "ElementaryTypeName",
+                    "src": "633:7:38"
+                  }
+                ],
+                "id": 6044,
+                "name": "VariableDeclaration",
+                "src": "633:29:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "buyOrderNftAmount",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6045,
+                    "name": "ElementaryTypeName",
+                    "src": "672:7:38"
+                  }
+                ],
+                "id": 6046,
+                "name": "VariableDeclaration",
+                "src": "672:25:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "buyOrderData",
+                  "scope": 6049,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6047,
+                    "name": "ElementaryTypeName",
+                    "src": "707:5:38"
+                  }
+                ],
+                "id": 6048,
+                "name": "VariableDeclaration",
+                "src": "707:18:38"
+              }
+            ],
+            "id": 6049,
+            "name": "StructDefinition",
+            "src": "228:504:38"
+          },
+          {
+            "attributes": {
+              "canonicalName": "LibDirectTransfer.AcceptBid",
+              "name": "AcceptBid",
+              "scope": 6081,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidMaker",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 6050,
+                    "name": "ElementaryTypeName",
+                    "src": "838:7:38"
+                  }
+                ],
+                "id": 6051,
+                "name": "VariableDeclaration",
+                "src": "838:16:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidNftAmount",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6052,
+                    "name": "ElementaryTypeName",
+                    "src": "867:7:38"
+                  }
+                ],
+                "id": 6053,
+                "name": "VariableDeclaration",
+                "src": "867:20:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "nftAssetClass",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes4",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes4",
+                      "type": "bytes4"
+                    },
+                    "id": 6054,
+                    "name": "ElementaryTypeName",
+                    "src": "897:6:38"
+                  }
+                ],
+                "id": 6055,
+                "name": "VariableDeclaration",
+                "src": "897:20:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "nftData",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6056,
+                    "name": "ElementaryTypeName",
+                    "src": "927:5:38"
+                  }
+                ],
+                "id": 6057,
+                "name": "VariableDeclaration",
+                "src": "927:13:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidPaymentAmount",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6058,
+                    "name": "ElementaryTypeName",
+                    "src": "950:7:38"
+                  }
+                ],
+                "id": 6059,
+                "name": "VariableDeclaration",
+                "src": "950:24:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "paymentToken",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 6060,
+                    "name": "ElementaryTypeName",
+                    "src": "984:7:38"
+                  }
+                ],
+                "id": 6061,
+                "name": "VariableDeclaration",
+                "src": "984:20:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidSalt",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6062,
+                    "name": "ElementaryTypeName",
+                    "src": "1014:7:38"
+                  }
+                ],
+                "id": 6063,
+                "name": "VariableDeclaration",
+                "src": "1014:15:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidStart",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6064,
+                    "name": "ElementaryTypeName",
+                    "src": "1039:4:38"
+                  }
+                ],
+                "id": 6065,
+                "name": "VariableDeclaration",
+                "src": "1039:13:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidEnd",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6066,
+                    "name": "ElementaryTypeName",
+                    "src": "1062:4:38"
+                  }
+                ],
+                "id": 6067,
+                "name": "VariableDeclaration",
+                "src": "1062:11:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidDataType",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes4",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes4",
+                      "type": "bytes4"
+                    },
+                    "id": 6068,
+                    "name": "ElementaryTypeName",
+                    "src": "1083:6:38"
+                  }
+                ],
+                "id": 6069,
+                "name": "VariableDeclaration",
+                "src": "1083:18:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidData",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6070,
+                    "name": "ElementaryTypeName",
+                    "src": "1111:5:38"
+                  }
+                ],
+                "id": 6071,
+                "name": "VariableDeclaration",
+                "src": "1111:13:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "bidSignature",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6072,
+                    "name": "ElementaryTypeName",
+                    "src": "1134:5:38"
+                  }
+                ],
+                "id": 6073,
+                "name": "VariableDeclaration",
+                "src": "1134:18:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderPaymentAmount",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6074,
+                    "name": "ElementaryTypeName",
+                    "src": "1163:7:38"
+                  }
+                ],
+                "id": 6075,
+                "name": "VariableDeclaration",
+                "src": "1163:30:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderNftAmount",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6076,
+                    "name": "ElementaryTypeName",
+                    "src": "1203:7:38"
+                  }
+                ],
+                "id": 6077,
+                "name": "VariableDeclaration",
+                "src": "1203:26:38"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "sellOrderData",
+                  "scope": 6080,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes",
+                      "type": "bytes"
+                    },
+                    "id": 6078,
+                    "name": "ElementaryTypeName",
+                    "src": "1239:5:38"
+                  }
+                ],
+                "id": 6079,
+                "name": "VariableDeclaration",
+                "src": "1239:19:38"
+              }
+            ],
+            "id": 6080,
+            "name": "StructDefinition",
+            "src": "811:454:38"
+          }
+        ],
+        "id": 6081,
+        "name": "ContractDefinition",
+        "src": "109:1158:38"
+      }
+    ],
+    "id": 6082,
+    "name": "SourceUnit",
+    "src": "33:1235:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-10-29T10:35:52.056Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

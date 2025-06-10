@@ -1,0 +1,1097 @@
+{
+  "contractName": "HasContractURI",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "contractURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"contractURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@gebrid/tokens/contracts/HasContractURI.sol\":\"HasContractURI\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@gebrid/tokens/contracts/HasContractURI.sol\":{\"keccak256\":\"0x3c7253e5d93ae74f4a010f612f7078682877d4590ef2e09780a5d14d08b3e224\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://712bd8be1e015e2aecc0ed7d76cf308626a3159b83f58a6cfce85dd6ba321044\",\"dweb:/ipfs/QmRw7WkDQFCaZVfKEGN5kRfZV2DcARtG37CE8heNgRSaiZ\"]},\"@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol\":{\"keccak256\":\"0xc6dbbc2f50a7c104377798a37b2acd1a41c1242544b0bb7a9a7c863f0520eb50\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ff3a66f685a49d3750c9b3588770d1ee43ce3cb718e1dc911ac65d8a6d1c1f0d\",\"dweb:/ipfs/QmVK2mdcbZTZ81YQ1rxWWNbYgy3Gpb3yz3L2qtDPTdx9hu\"]},\"@openzeppelin/contracts-upgradeable/introspection/IERC165Upgradeable.sol\":{\"keccak256\":\"0x4784c3f8a520a739dd25d76f514833a653990902d0e21601aed45bda44c87524\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://359411cc44a4499f37d46562ef3f348db443f9a699138c1797264d20b14697b7\",\"dweb:/ipfs/QmUmeQNUwve4MFCc1ace6zMnstqa8S9SZe1nXG9THcpQ5v\"]},\"@openzeppelin/contracts-upgradeable/proxy/Initializable.sol\":{\"keccak256\":\"0xd8e4eb08dcc1d1860fb347ba5ffd595242b9a1b66d49a47f2b4cb51c3f35017e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7dbc89479d30592e82442edc38053b380f611037a5e6ceafc7bf57a7aa1f0305\",\"dweb:/ipfs/QmcdYtt56WmjeYvsFjK69FnahnAriw88VzY3XRZwXkQKKN\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0xfc5ea91fa9ceb1961023b2a6c978b902888c52b90847ac7813fe3b79524165f6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a6b81dcc816857a9d981386f6d8de49198420ee41cdc0ecade366ab412174d03\",\"dweb:/ipfs/QmV2vznMT6m9qo3pFMAWi3Nz3UDhwesgwFxeXe6Tod3v8A\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.7.6;\n\nimport \"@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol\";\n\nabstract contract HasContractURI is ERC165Upgradeable {\n\n    string public contractURI;\n\n    /*\n     * bytes4(keccak256('contractURI()')) == 0xe8a3d485\n     */\n    bytes4 private constant _INTERFACE_ID_CONTRACT_URI = 0xe8a3d485;\n\n    function __HasContractURI_init_unchained(string memory _contractURI) internal initializer {\n        contractURI = _contractURI;\n        _registerInterface(_INTERFACE_ID_CONTRACT_URI);\n    }\n\n    /**\n     * @dev Internal function to set the contract URI\n     * @param _contractURI string URI prefix to assign\n     */\n    function _setContractURI(string memory _contractURI) internal {\n        contractURI = _contractURI;\n    }\n\n    uint256[49] private __gap;\n}\n",
+  "sourcePath": "@gebrid/tokens/contracts/HasContractURI.sol",
+  "ast": {
+    "absolutePath": "@gebrid/tokens/contracts/HasContractURI.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        20995
+      ],
+      "ERC165Upgradeable": [
+        19614
+      ],
+      "HasContractURI": [
+        9393
+      ],
+      "IERC165Upgradeable": [
+        19626
+      ],
+      "Initializable": [
+        20120
+      ]
+    },
+    "id": 9394,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9353,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:56"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+        "id": 9354,
+        "nodeType": "ImportDirective",
+        "scope": 9394,
+        "sourceUnit": 19615,
+        "src": "57:81:56",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 9355,
+              "name": "ERC165Upgradeable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 19614,
+              "src": "176:17:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC165Upgradeable_$19614",
+                "typeString": "contract ERC165Upgradeable"
+              }
+            },
+            "id": 9356,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:17:56"
+          }
+        ],
+        "contractDependencies": [
+          19614,
+          19626,
+          20120
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 9393,
+        "linearizedBaseContracts": [
+          9393,
+          19614,
+          19626,
+          20120
+        ],
+        "name": "HasContractURI",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "e8a3d485",
+            "id": 9358,
+            "mutability": "mutable",
+            "name": "contractURI",
+            "nodeType": "VariableDeclaration",
+            "scope": 9393,
+            "src": "201:25:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 9357,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "201:6:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 9361,
+            "mutability": "constant",
+            "name": "_INTERFACE_ID_CONTRACT_URI",
+            "nodeType": "VariableDeclaration",
+            "scope": 9393,
+            "src": "304:63:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 9359,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "304:6:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "hexValue": "30786538613364343835",
+              "id": 9360,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "357:10:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3903050885_by_1",
+                "typeString": "int_const 3903050885"
+              },
+              "value": "0xe8a3d485"
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 9376,
+              "nodeType": "Block",
+              "src": "464:99:56",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 9370,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 9368,
+                      "name": "contractURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9358,
+                      "src": "474:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 9369,
+                      "name": "_contractURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9363,
+                      "src": "488:12:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "474:26:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 9371,
+                  "nodeType": "ExpressionStatement",
+                  "src": "474:26:56"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 9373,
+                        "name": "_INTERFACE_ID_CONTRACT_URI",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9361,
+                        "src": "529:26:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 9372,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19609,
+                      "src": "510:18:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 9374,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "510:46:56",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9375,
+                  "nodeType": "ExpressionStatement",
+                  "src": "510:46:56"
+                }
+              ]
+            },
+            "id": 9377,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 9366,
+                "modifierName": {
+                  "id": 9365,
+                  "name": "initializer",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 20103,
+                  "src": "452:11:56",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "452:11:56"
+              }
+            ],
+            "name": "__HasContractURI_init_unchained",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9364,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9363,
+                  "mutability": "mutable",
+                  "name": "_contractURI",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9377,
+                  "src": "415:26:56",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9362,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "415:6:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:28:56"
+            },
+            "returnParameters": {
+              "id": 9367,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "464:0:56"
+            },
+            "scope": 9393,
+            "src": "374:189:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 9387,
+              "nodeType": "Block",
+              "src": "756:43:56",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 9385,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 9383,
+                      "name": "contractURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9358,
+                      "src": "766:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 9384,
+                      "name": "_contractURI",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9380,
+                      "src": "780:12:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "766:26:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 9386,
+                  "nodeType": "ExpressionStatement",
+                  "src": "766:26:56"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 9378,
+              "nodeType": "StructuredDocumentation",
+              "src": "569:120:56",
+              "text": " @dev Internal function to set the contract URI\n @param _contractURI string URI prefix to assign"
+            },
+            "id": 9388,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setContractURI",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9380,
+                  "mutability": "mutable",
+                  "name": "_contractURI",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9388,
+                  "src": "719:26:56",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 9379,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "719:6:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "718:28:56"
+            },
+            "returnParameters": {
+              "id": 9382,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "756:0:56"
+            },
+            "scope": 9393,
+            "src": "694:105:56",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 9392,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nodeType": "VariableDeclaration",
+            "scope": 9393,
+            "src": "805:25:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 9389,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "805:7:56",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 9391,
+              "length": {
+                "hexValue": "3439",
+                "id": 9390,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "813:2:56",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "805:11:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 9394,
+        "src": "140:693:56"
+      }
+    ],
+    "src": "33:801:56"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "@gebrid/tokens/contracts/HasContractURI.sol",
+      "exportedSymbols": {
+        "AddressUpgradeable": [
+          20995
+        ],
+        "ERC165Upgradeable": [
+          19614
+        ],
+        "HasContractURI": [
+          9393
+        ],
+        "IERC165Upgradeable": [
+          19626
+        ],
+        "Initializable": [
+          20120
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 9353,
+        "name": "PragmaDirective",
+        "src": "33:22:56"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 19615,
+          "absolutePath": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+          "file": "@openzeppelin/contracts-upgradeable/introspection/ERC165Upgradeable.sol",
+          "scope": 9394,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 9354,
+        "name": "ImportDirective",
+        "src": "57:81:56"
+      },
+      {
+        "attributes": {
+          "abstract": true,
+          "contractDependencies": [
+            19614,
+            19626,
+            20120
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            9393,
+            19614,
+            19626,
+            20120
+          ],
+          "name": "HasContractURI",
+          "scope": 9394
+        },
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              {
+                "attributes": {
+                  "name": "ERC165Upgradeable",
+                  "referencedDeclaration": 19614,
+                  "type": "contract ERC165Upgradeable"
+                },
+                "id": 9355,
+                "name": "UserDefinedTypeName",
+                "src": "176:17:56"
+              }
+            ],
+            "id": 9356,
+            "name": "InheritanceSpecifier",
+            "src": "176:17:56"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "e8a3d485",
+              "mutability": "mutable",
+              "name": "contractURI",
+              "scope": 9393,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 9357,
+                "name": "ElementaryTypeName",
+                "src": "201:6:56"
+              }
+            ],
+            "id": 9358,
+            "name": "VariableDeclaration",
+            "src": "201:25:56"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "mutability": "constant",
+              "name": "_INTERFACE_ID_CONTRACT_URI",
+              "scope": 9393,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes4",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes4",
+                  "type": "bytes4"
+                },
+                "id": 9359,
+                "name": "ElementaryTypeName",
+                "src": "304:6:56"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "30786538613364343835",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "int_const 3903050885",
+                  "value": "0xe8a3d485"
+                },
+                "id": 9360,
+                "name": "Literal",
+                "src": "357:10:56"
+              }
+            ],
+            "id": 9361,
+            "name": "VariableDeclaration",
+            "src": "304:63:56"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "__HasContractURI_init_unchained",
+              "scope": 9393,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_contractURI",
+                      "scope": 9377,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 9362,
+                        "name": "ElementaryTypeName",
+                        "src": "415:6:56"
+                      }
+                    ],
+                    "id": 9363,
+                    "name": "VariableDeclaration",
+                    "src": "415:26:56"
+                  }
+                ],
+                "id": 9364,
+                "name": "ParameterList",
+                "src": "414:28:56"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9367,
+                "name": "ParameterList",
+                "src": "464:0:56"
+              },
+              {
+                "attributes": {},
+                "children": [
+                  {
+                    "attributes": {
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 20103,
+                      "type": "modifier ()",
+                      "value": "initializer"
+                    },
+                    "id": 9365,
+                    "name": "Identifier",
+                    "src": "452:11:56"
+                  }
+                ],
+                "id": 9366,
+                "name": "ModifierInvocation",
+                "src": "452:11:56"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9358,
+                              "type": "string storage ref",
+                              "value": "contractURI"
+                            },
+                            "id": 9368,
+                            "name": "Identifier",
+                            "src": "474:11:56"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9363,
+                              "type": "string memory",
+                              "value": "_contractURI"
+                            },
+                            "id": 9369,
+                            "name": "Identifier",
+                            "src": "488:12:56"
+                          }
+                        ],
+                        "id": 9370,
+                        "name": "Assignment",
+                        "src": "474:26:56"
+                      }
+                    ],
+                    "id": 9371,
+                    "name": "ExpressionStatement",
+                    "src": "474:26:56"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes4",
+                                  "typeString": "bytes4"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 19609,
+                              "type": "function (bytes4)",
+                              "value": "_registerInterface"
+                            },
+                            "id": 9372,
+                            "name": "Identifier",
+                            "src": "510:18:56"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9361,
+                              "type": "bytes4",
+                              "value": "_INTERFACE_ID_CONTRACT_URI"
+                            },
+                            "id": 9373,
+                            "name": "Identifier",
+                            "src": "529:26:56"
+                          }
+                        ],
+                        "id": 9374,
+                        "name": "FunctionCall",
+                        "src": "510:46:56"
+                      }
+                    ],
+                    "id": 9375,
+                    "name": "ExpressionStatement",
+                    "src": "510:46:56"
+                  }
+                ],
+                "id": 9376,
+                "name": "Block",
+                "src": "464:99:56"
+              }
+            ],
+            "id": 9377,
+            "name": "FunctionDefinition",
+            "src": "374:189:56"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "_setContractURI",
+              "scope": 9393,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @dev Internal function to set the contract URI\n @param _contractURI string URI prefix to assign"
+                },
+                "id": 9378,
+                "name": "StructuredDocumentation",
+                "src": "569:120:56"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_contractURI",
+                      "scope": 9388,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 9379,
+                        "name": "ElementaryTypeName",
+                        "src": "719:6:56"
+                      }
+                    ],
+                    "id": 9380,
+                    "name": "VariableDeclaration",
+                    "src": "719:26:56"
+                  }
+                ],
+                "id": 9381,
+                "name": "ParameterList",
+                "src": "718:28:56"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9382,
+                "name": "ParameterList",
+                "src": "756:0:56"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "string storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9358,
+                              "type": "string storage ref",
+                              "value": "contractURI"
+                            },
+                            "id": 9383,
+                            "name": "Identifier",
+                            "src": "766:11:56"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9380,
+                              "type": "string memory",
+                              "value": "_contractURI"
+                            },
+                            "id": 9384,
+                            "name": "Identifier",
+                            "src": "780:12:56"
+                          }
+                        ],
+                        "id": 9385,
+                        "name": "Assignment",
+                        "src": "766:26:56"
+                      }
+                    ],
+                    "id": 9386,
+                    "name": "ExpressionStatement",
+                    "src": "766:26:56"
+                  }
+                ],
+                "id": 9387,
+                "name": "Block",
+                "src": "756:43:56"
+              }
+            ],
+            "id": 9388,
+            "name": "FunctionDefinition",
+            "src": "694:105:56"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "__gap",
+              "scope": 9393,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256[49]",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "uint256[49]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 9389,
+                    "name": "ElementaryTypeName",
+                    "src": "805:7:56"
+                  },
+                  {
+                    "attributes": {
+                      "hexvalue": "3439",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "token": "number",
+                      "type": "int_const 49",
+                      "value": "49"
+                    },
+                    "id": 9390,
+                    "name": "Literal",
+                    "src": "813:2:56"
+                  }
+                ],
+                "id": 9391,
+                "name": "ArrayTypeName",
+                "src": "805:11:56"
+              }
+            ],
+            "id": 9392,
+            "name": "VariableDeclaration",
+            "src": "805:25:56"
+          }
+        ],
+        "id": 9393,
+        "name": "ContractDefinition",
+        "src": "140:693:56"
+      }
+    ],
+    "id": 9394,
+    "name": "SourceUnit",
+    "src": "33:801:56"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-10-29T10:34:29.156Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}. Time complexity O(1), guaranteed to always use less than 30 000 gas."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

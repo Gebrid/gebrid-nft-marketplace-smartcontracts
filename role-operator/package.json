@@ -1,0 +1,27 @@
+{
+  "name": "@gebrid/role-operator",
+  "version": "0.1.3",
+  "description": "Solidity operator role functionality",
+  "files": [
+    "contracts",
+    "readme.md"
+  ],
+  "access": "public",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/gebrid/gebrid-protocol-contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "truffle",
+    "test"
+  ],
+  "author": "noname",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "3.4.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@gebrid/royalties",
+  "version": "0.7.5",
+  "description": "Solidity interfaces to support royalties",
+  "files": [
+    "contracts",
+    "readme.md"
+  ],
+  "access": "public",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/gebrid/gebrid-protocol-contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "truffle",
+    "test"
+  ],
+  "author": "noname",
+  "license": "MIT",
+  "dependencies": {
+    "@gebrid/lib-part": "^0.1.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

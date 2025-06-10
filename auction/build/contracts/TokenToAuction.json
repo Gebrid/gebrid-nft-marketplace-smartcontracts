@@ -1,0 +1,1625 @@
+{
+  "contractName": "TokenToAuction",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAuctionByToken",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"getAuctionByToken\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"contract to add tokenToAuctionId functionality to auctionHouse\",\"kind\":\"dev\",\"methods\":{\"getAuctionByToken(address,uint256)\":{\"details\":\"returns auction id by token address and token id\"}},\"stateVariables\":{\"tokenToAuctionId\":{\"details\":\"mapping to store auction ids for token address + token id (only stores erc-721 tokens)\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/wrapper/TokenToAuction.sol\":\"TokenToAuction\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/wrapper/TokenToAuction.sol\":{\"keccak256\":\"0xb2b6fa8371c2b42ee6650d41402b429069fd9f0cf2b8e52d3b69103a7a4281c8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4284671b2fb49ca4a9e11aa9ab8b0f33ff1d4a655f5389f585c3bde555ff46ae\",\"dweb:/ipfs/QmVtnaAHSbZiMS921FdfoPsENevNumSAMSGHJSTVV5ax8v\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060c48061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063152b2c0a14602d575b600080fd5b605660048036036040811015604157600080fd5b506001600160a01b0381351690602001356068565b60408051918252519081900360200190f35b6001600160a01b039190911660009081526020818152604080832093835292905220549056fea2646970667358221220c803482b94354ec18ca7ad0b0e8f2cb9e0249b4bb383413abfd5e8352ff5c64b64736f6c63430007060033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063152b2c0a14602d575b600080fd5b605660048036036040811015604157600080fd5b506001600160a01b0381351690602001356068565b60408051918252519081900360200190f35b6001600160a01b039190911660009081526020818152604080832093835292905220549056fea2646970667358221220c803482b94354ec18ca7ad0b0e8f2cb9e0249b4bb383413abfd5e8352ff5c64b64736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "128:858:42:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "128:858:42:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;399:152;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;399:152:42;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;506:29:42;;;;483:4;506:29;;;;;;;;;;;:38;;;;;;;;;399:152::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.7.6;\n\n/// @dev contract to add tokenToAuctionId functionality to auctionHouse\ncontract TokenToAuction {\n    /// @dev mapping to store auction ids for token address + token id (only stores erc-721 tokens)\n    mapping(address => mapping(uint256 => uint256)) private tokenToAuctionId;\n\n    /// @dev returns auction id by token address and token id\n    function getAuctionByToken(address _collection, uint tokenId) external view returns(uint) {\n        return tokenToAuctionId[_collection][tokenId];\n    }\n\n    /// @dev sets auction id for token address and token id\n    function setAuctionForToken(address token, uint tokenId, uint auctionId) internal {\n        tokenToAuctionId[token][tokenId] = auctionId;\n    }\n\n    /// @dev deletes auctionId from tokenToAuctionId\n    function deleteAuctionForToken(address token, uint tokenId) internal {\n        delete tokenToAuctionId[token][tokenId];\n    }\n    \n    uint256[50] private ______gap;\n}",
+  "sourcePath": "/Users/kronas/WebstormProjects/gebrid-protocol-contracts/auction/contracts/wrapper/TokenToAuction.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/wrapper/TokenToAuction.sol",
+    "exportedSymbols": {
+      "TokenToAuction": [
+        6686
+      ]
+    },
+    "id": 6687,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6621,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:42"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6622,
+          "nodeType": "StructuredDocumentation",
+          "src": "56:72:42",
+          "text": "@dev contract to add tokenToAuctionId functionality to auctionHouse"
+        },
+        "fullyImplemented": true,
+        "id": 6686,
+        "linearizedBaseContracts": [
+          6686
+        ],
+        "name": "TokenToAuction",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "documentation": {
+              "id": 6623,
+              "nodeType": "StructuredDocumentation",
+              "src": "158:95:42",
+              "text": "@dev mapping to store auction ids for token address + token id (only stores erc-721 tokens)"
+            },
+            "id": 6629,
+            "mutability": "mutable",
+            "name": "tokenToAuctionId",
+            "nodeType": "VariableDeclaration",
+            "scope": 6686,
+            "src": "258:72:42",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(uint256 => uint256))"
+            },
+            "typeName": {
+              "id": 6628,
+              "keyType": {
+                "id": 6624,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "266:7:42",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "258:47:42",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(uint256 => uint256))"
+              },
+              "valueType": {
+                "id": 6627,
+                "keyType": {
+                  "id": 6625,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "285:7:42",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "277:27:42",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                  "typeString": "mapping(uint256 => uint256)"
+                },
+                "valueType": {
+                  "id": 6626,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "296:7:42",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 6645,
+              "nodeType": "Block",
+              "src": "489:62:42",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "baseExpression": {
+                        "id": 6639,
+                        "name": "tokenToAuctionId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6629,
+                        "src": "506:16:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
+                          "typeString": "mapping(address => mapping(uint256 => uint256))"
+                        }
+                      },
+                      "id": 6641,
+                      "indexExpression": {
+                        "id": 6640,
+                        "name": "_collection",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6632,
+                        "src": "523:11:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "506:29:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                        "typeString": "mapping(uint256 => uint256)"
+                      }
+                    },
+                    "id": 6643,
+                    "indexExpression": {
+                      "id": 6642,
+                      "name": "tokenId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6634,
+                      "src": "536:7:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "506:38:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 6638,
+                  "id": 6644,
+                  "nodeType": "Return",
+                  "src": "499:45:42"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 6630,
+              "nodeType": "StructuredDocumentation",
+              "src": "337:57:42",
+              "text": "@dev returns auction id by token address and token id"
+            },
+            "functionSelector": "152b2c0a",
+            "id": 6646,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuctionByToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6635,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6632,
+                  "mutability": "mutable",
+                  "name": "_collection",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6646,
+                  "src": "426:19:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6631,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "426:7:42",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6634,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6646,
+                  "src": "447:12:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6633,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "447:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "425:35:42"
+            },
+            "returnParameters": {
+              "id": 6638,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6637,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6646,
+                  "src": "483:4:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6636,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "483:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "482:6:42"
+            },
+            "scope": 6686,
+            "src": "399:152:42",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 6664,
+              "nodeType": "Block",
+              "src": "699:61:42",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6662,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 6656,
+                          "name": "tokenToAuctionId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6629,
+                          "src": "709:16:42",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
+                            "typeString": "mapping(address => mapping(uint256 => uint256))"
+                          }
+                        },
+                        "id": 6659,
+                        "indexExpression": {
+                          "id": 6657,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6649,
+                          "src": "726:5:42",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "709:23:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                          "typeString": "mapping(uint256 => uint256)"
+                        }
+                      },
+                      "id": 6660,
+                      "indexExpression": {
+                        "id": 6658,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6651,
+                        "src": "733:7:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "709:32:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 6661,
+                      "name": "auctionId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6653,
+                      "src": "744:9:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "709:44:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 6663,
+                  "nodeType": "ExpressionStatement",
+                  "src": "709:44:42"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 6647,
+              "nodeType": "StructuredDocumentation",
+              "src": "557:55:42",
+              "text": "@dev sets auction id for token address and token id"
+            },
+            "id": 6665,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setAuctionForToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6654,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6649,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6665,
+                  "src": "645:13:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6648,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "645:7:42",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6651,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6665,
+                  "src": "660:12:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6650,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6653,
+                  "mutability": "mutable",
+                  "name": "auctionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6665,
+                  "src": "674:14:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6652,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "674:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "644:45:42"
+            },
+            "returnParameters": {
+              "id": 6655,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "699:0:42"
+            },
+            "scope": 6686,
+            "src": "617:143:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6680,
+              "nodeType": "Block",
+              "src": "888:56:42",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6678,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "898:39:42",
+                    "subExpression": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 6673,
+                          "name": "tokenToAuctionId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6629,
+                          "src": "905:16:42",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_uint256_$_$",
+                            "typeString": "mapping(address => mapping(uint256 => uint256))"
+                          }
+                        },
+                        "id": 6675,
+                        "indexExpression": {
+                          "id": 6674,
+                          "name": "token",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6668,
+                          "src": "922:5:42",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "905:23:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                          "typeString": "mapping(uint256 => uint256)"
+                        }
+                      },
+                      "id": 6677,
+                      "indexExpression": {
+                        "id": 6676,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6670,
+                        "src": "929:7:42",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "905:32:42",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 6679,
+                  "nodeType": "ExpressionStatement",
+                  "src": "898:39:42"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 6666,
+              "nodeType": "StructuredDocumentation",
+              "src": "766:48:42",
+              "text": "@dev deletes auctionId from tokenToAuctionId"
+            },
+            "id": 6681,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deleteAuctionForToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6671,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6668,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6681,
+                  "src": "850:13:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6667,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "850:7:42",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6670,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6681,
+                  "src": "865:12:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6669,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "865:4:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "849:29:42"
+            },
+            "returnParameters": {
+              "id": 6672,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "888:0:42"
+            },
+            "scope": 6686,
+            "src": "819:125:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6685,
+            "mutability": "mutable",
+            "name": "______gap",
+            "nodeType": "VariableDeclaration",
+            "scope": 6686,
+            "src": "954:29:42",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$50_storage",
+              "typeString": "uint256[50]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 6682,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "954:7:42",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 6684,
+              "length": {
+                "hexValue": "3530",
+                "id": 6683,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "962:2:42",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_50_by_1",
+                  "typeString": "int_const 50"
+                },
+                "value": "50"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "954:11:42",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$50_storage_ptr",
+                "typeString": "uint256[50]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 6687,
+        "src": "128:858:42"
+      }
+    ],
+    "src": "32:954:42"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/wrapper/TokenToAuction.sol",
+      "exportedSymbols": {
+        "TokenToAuction": [
+          6686
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 6621,
+        "name": "PragmaDirective",
+        "src": "32:22:42"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6686
+          ],
+          "name": "TokenToAuction",
+          "scope": 6687
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@dev contract to add tokenToAuctionId functionality to auctionHouse"
+            },
+            "id": 6622,
+            "name": "StructuredDocumentation",
+            "src": "56:72:42"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "tokenToAuctionId",
+              "scope": 6686,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => mapping(uint256 => uint256))",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => mapping(uint256 => uint256))"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6624,
+                    "name": "ElementaryTypeName",
+                    "src": "266:7:42"
+                  },
+                  {
+                    "attributes": {
+                      "type": "mapping(uint256 => uint256)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6625,
+                        "name": "ElementaryTypeName",
+                        "src": "285:7:42"
+                      },
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6626,
+                        "name": "ElementaryTypeName",
+                        "src": "296:7:42"
+                      }
+                    ],
+                    "id": 6627,
+                    "name": "Mapping",
+                    "src": "277:27:42"
+                  }
+                ],
+                "id": 6628,
+                "name": "Mapping",
+                "src": "258:47:42"
+              },
+              {
+                "attributes": {
+                  "text": "@dev mapping to store auction ids for token address + token id (only stores erc-721 tokens)"
+                },
+                "id": 6623,
+                "name": "StructuredDocumentation",
+                "src": "158:95:42"
+              }
+            ],
+            "id": 6629,
+            "name": "VariableDeclaration",
+            "src": "258:72:42"
+          },
+          {
+            "attributes": {
+              "functionSelector": "152b2c0a",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAuctionByToken",
+              "scope": 6686,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev returns auction id by token address and token id"
+                },
+                "id": 6630,
+                "name": "StructuredDocumentation",
+                "src": "337:57:42"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_collection",
+                      "scope": 6646,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6631,
+                        "name": "ElementaryTypeName",
+                        "src": "426:7:42"
+                      }
+                    ],
+                    "id": 6632,
+                    "name": "VariableDeclaration",
+                    "src": "426:19:42"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tokenId",
+                      "scope": 6646,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6633,
+                        "name": "ElementaryTypeName",
+                        "src": "447:4:42"
+                      }
+                    ],
+                    "id": 6634,
+                    "name": "VariableDeclaration",
+                    "src": "447:12:42"
+                  }
+                ],
+                "id": 6635,
+                "name": "ParameterList",
+                "src": "425:35:42"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 6646,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6636,
+                        "name": "ElementaryTypeName",
+                        "src": "483:4:42"
+                      }
+                    ],
+                    "id": 6637,
+                    "name": "VariableDeclaration",
+                    "src": "483:4:42"
+                  }
+                ],
+                "id": 6638,
+                "name": "ParameterList",
+                "src": "482:6:42"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 6638
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "mapping(uint256 => uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6629,
+                                  "type": "mapping(address => mapping(uint256 => uint256))",
+                                  "value": "tokenToAuctionId"
+                                },
+                                "id": 6639,
+                                "name": "Identifier",
+                                "src": "506:16:42"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6632,
+                                  "type": "address",
+                                  "value": "_collection"
+                                },
+                                "id": 6640,
+                                "name": "Identifier",
+                                "src": "523:11:42"
+                              }
+                            ],
+                            "id": 6641,
+                            "name": "IndexAccess",
+                            "src": "506:29:42"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6634,
+                              "type": "uint256",
+                              "value": "tokenId"
+                            },
+                            "id": 6642,
+                            "name": "Identifier",
+                            "src": "536:7:42"
+                          }
+                        ],
+                        "id": 6643,
+                        "name": "IndexAccess",
+                        "src": "506:38:42"
+                      }
+                    ],
+                    "id": 6644,
+                    "name": "Return",
+                    "src": "499:45:42"
+                  }
+                ],
+                "id": 6645,
+                "name": "Block",
+                "src": "489:62:42"
+              }
+            ],
+            "id": 6646,
+            "name": "FunctionDefinition",
+            "src": "399:152:42"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setAuctionForToken",
+              "scope": 6686,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev sets auction id for token address and token id"
+                },
+                "id": 6647,
+                "name": "StructuredDocumentation",
+                "src": "557:55:42"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "token",
+                      "scope": 6665,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6648,
+                        "name": "ElementaryTypeName",
+                        "src": "645:7:42"
+                      }
+                    ],
+                    "id": 6649,
+                    "name": "VariableDeclaration",
+                    "src": "645:13:42"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tokenId",
+                      "scope": 6665,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6650,
+                        "name": "ElementaryTypeName",
+                        "src": "660:4:42"
+                      }
+                    ],
+                    "id": 6651,
+                    "name": "VariableDeclaration",
+                    "src": "660:12:42"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "auctionId",
+                      "scope": 6665,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6652,
+                        "name": "ElementaryTypeName",
+                        "src": "674:4:42"
+                      }
+                    ],
+                    "id": 6653,
+                    "name": "VariableDeclaration",
+                    "src": "674:14:42"
+                  }
+                ],
+                "id": 6654,
+                "name": "ParameterList",
+                "src": "644:45:42"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6655,
+                "name": "ParameterList",
+                "src": "699:0:42"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "mapping(uint256 => uint256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6629,
+                                      "type": "mapping(address => mapping(uint256 => uint256))",
+                                      "value": "tokenToAuctionId"
+                                    },
+                                    "id": 6656,
+                                    "name": "Identifier",
+                                    "src": "709:16:42"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6649,
+                                      "type": "address",
+                                      "value": "token"
+                                    },
+                                    "id": 6657,
+                                    "name": "Identifier",
+                                    "src": "726:5:42"
+                                  }
+                                ],
+                                "id": 6659,
+                                "name": "IndexAccess",
+                                "src": "709:23:42"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6651,
+                                  "type": "uint256",
+                                  "value": "tokenId"
+                                },
+                                "id": 6658,
+                                "name": "Identifier",
+                                "src": "733:7:42"
+                              }
+                            ],
+                            "id": 6660,
+                            "name": "IndexAccess",
+                            "src": "709:32:42"
+                          },
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6653,
+                              "type": "uint256",
+                              "value": "auctionId"
+                            },
+                            "id": 6661,
+                            "name": "Identifier",
+                            "src": "744:9:42"
+                          }
+                        ],
+                        "id": 6662,
+                        "name": "Assignment",
+                        "src": "709:44:42"
+                      }
+                    ],
+                    "id": 6663,
+                    "name": "ExpressionStatement",
+                    "src": "709:44:42"
+                  }
+                ],
+                "id": 6664,
+                "name": "Block",
+                "src": "699:61:42"
+              }
+            ],
+            "id": 6665,
+            "name": "FunctionDefinition",
+            "src": "617:143:42"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "deleteAuctionForToken",
+              "scope": 6686,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev deletes auctionId from tokenToAuctionId"
+                },
+                "id": 6666,
+                "name": "StructuredDocumentation",
+                "src": "766:48:42"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "token",
+                      "scope": 6681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6667,
+                        "name": "ElementaryTypeName",
+                        "src": "850:7:42"
+                      }
+                    ],
+                    "id": 6668,
+                    "name": "VariableDeclaration",
+                    "src": "850:13:42"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "tokenId",
+                      "scope": 6681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6669,
+                        "name": "ElementaryTypeName",
+                        "src": "865:4:42"
+                      }
+                    ],
+                    "id": 6670,
+                    "name": "VariableDeclaration",
+                    "src": "865:12:42"
+                  }
+                ],
+                "id": 6671,
+                "name": "ParameterList",
+                "src": "849:29:42"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6672,
+                "name": "ParameterList",
+                "src": "888:0:42"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "delete",
+                          "prefix": true,
+                          "type": "tuple()"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "mapping(uint256 => uint256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6629,
+                                      "type": "mapping(address => mapping(uint256 => uint256))",
+                                      "value": "tokenToAuctionId"
+                                    },
+                                    "id": 6673,
+                                    "name": "Identifier",
+                                    "src": "905:16:42"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6668,
+                                      "type": "address",
+                                      "value": "token"
+                                    },
+                                    "id": 6674,
+                                    "name": "Identifier",
+                                    "src": "922:5:42"
+                                  }
+                                ],
+                                "id": 6675,
+                                "name": "IndexAccess",
+                                "src": "905:23:42"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6670,
+                                  "type": "uint256",
+                                  "value": "tokenId"
+                                },
+                                "id": 6676,
+                                "name": "Identifier",
+                                "src": "929:7:42"
+                              }
+                            ],
+                            "id": 6677,
+                            "name": "IndexAccess",
+                            "src": "905:32:42"
+                          }
+                        ],
+                        "id": 6678,
+                        "name": "UnaryOperation",
+                        "src": "898:39:42"
+                      }
+                    ],
+                    "id": 6679,
+                    "name": "ExpressionStatement",
+                    "src": "898:39:42"
+                  }
+                ],
+                "id": 6680,
+                "name": "Block",
+                "src": "888:56:42"
+              }
+            ],
+            "id": 6681,
+            "name": "FunctionDefinition",
+            "src": "819:125:42"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "______gap",
+              "scope": 6686,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256[50]",
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "uint256[50]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6682,
+                    "name": "ElementaryTypeName",
+                    "src": "954:7:42"
+                  },
+                  {
+                    "attributes": {
+                      "hexvalue": "3530",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "token": "number",
+                      "type": "int_const 50",
+                      "value": "50"
+                    },
+                    "id": 6683,
+                    "name": "Literal",
+                    "src": "962:2:42"
+                  }
+                ],
+                "id": 6684,
+                "name": "ArrayTypeName",
+                "src": "954:11:42"
+              }
+            ],
+            "id": 6685,
+            "name": "VariableDeclaration",
+            "src": "954:29:42"
+          }
+        ],
+        "id": 6686,
+        "name": "ContractDefinition",
+        "src": "128:858:42"
+      }
+    ],
+    "id": 6687,
+    "name": "SourceUnit",
+    "src": "32:954:42"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-10-25T16:32:36.648Z",
+  "devdoc": {
+    "details": "contract to add tokenToAuctionId functionality to auctionHouse",
+    "kind": "dev",
+    "methods": {
+      "getAuctionByToken(address,uint256)": {
+        "details": "returns auction id by token address and token id"
+      }
+    },
+    "stateVariables": {
+      "tokenToAuctionId": {
+        "details": "mapping to store auction ids for token address + token id (only stores erc-721 tokens)"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

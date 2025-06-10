@@ -1,0 +1,2248 @@
+{
+  "contractName": "LibOrderDataV3",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "V3_BUY",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "V3_SELL",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"V3_BUY\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"V3_SELL\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@gebrid/exchange/contracts/libraries/LibOrderDataV3.sol\":\"LibOrderDataV3\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@gebrid/exchange/contracts/libraries/LibOrderDataV3.sol\":{\"keccak256\":\"0x85f6102d8760dc76e3dfaaa66eaf3bcd689f430bde11090865d0d86fb9f0540c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://85a740d5d394f9cc39b0221d1c36b8f811a33726658b88c0824d6d6c87c4415d\",\"dweb:/ipfs/QmZ4xq9pUbrEZzEVgWAUWtj7pDEp7ngx1gfiNLMEAZgsC3\"]},\"@gebrid/lib-part/contracts/LibPart.sol\":{\"keccak256\":\"0xd0123f7411573a6a7e1527e0d3901913d7642e504ff240d5b7c5b76a28587def\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://447b449f7f986ecfdea10cbc96ae276877102866353b4f8410fec0bdb357d5ae\",\"dweb:/ipfs/QmatbYwMc1UXCGGH1D9fvgLbLPNdgzBVafYW84B1nJJiRr\"]}},\"version\":1}",
+  "bytecode": "0x60f5610025600b82828239805160001a60731461001857fe5b30600052607381538281f3fe7300000000000000000000000000000000000000003014608060405260043610603d5760003560e01c806366c5bb27146042578063fcbf579d14605c575b600080fd5b60486062565b6040516053919060aa565b60405180910390f35b60486086565b7f2fa3cfd36fc2a11048e46a7dac1916c392731880ba073f2b7f10566b2fd6133e81565b7f1b18cdf6be079a715471a3705c2d89e1d730066ce14915cb307cc3e4a90c92d481565b6001600160e01b03199190911681526020019056fea26469706673582212200119cce0533aff05349363c39fbafa2c6d1ae29816ec84b531f575824904d97b64736f6c63430007060033",
+  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610603d5760003560e01c806366c5bb27146042578063fcbf579d14605c575b600080fd5b60486062565b6040516053919060aa565b60405180910390f35b60486086565b7f2fa3cfd36fc2a11048e46a7dac1916c392731880ba073f2b7f10566b2fd6133e81565b7f1b18cdf6be079a715471a3705c2d89e1d730066ce14915cb307cc3e4a90c92d481565b6001600160e01b03199190911681526020019056fea26469706673582212200119cce0533aff05349363c39fbafa2c6d1ae29816ec84b531f575824904d97b64736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:226:147",
+        "statements": [
+          {
+            "nodeType": "YulBlock",
+            "src": "6:3:147",
+            "statements": []
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "121:103:147",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "131:26:147",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "143:9:147"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "154:2:147",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "139:3:147"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "139:18:147"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "131:4:147"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "173:9:147"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value0",
+                            "nodeType": "YulIdentifier",
+                            "src": "188:6:147"
+                          },
+                          {
+                            "arguments": [
+                              {
+                                "kind": "number",
+                                "nodeType": "YulLiteral",
+                                "src": "200:3:147",
+                                "type": "",
+                                "value": "224"
+                              },
+                              {
+                                "kind": "number",
+                                "nodeType": "YulLiteral",
+                                "src": "205:10:147",
+                                "type": "",
+                                "value": "0xffffffff"
+                              }
+                            ],
+                            "functionName": {
+                              "name": "shl",
+                              "nodeType": "YulIdentifier",
+                              "src": "196:3:147"
+                            },
+                            "nodeType": "YulFunctionCall",
+                            "src": "196:20:147"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "and",
+                          "nodeType": "YulIdentifier",
+                          "src": "184:3:147"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "184:33:147"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "166:6:147"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "166:52:147"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "166:52:147"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_bytes4__to_t_bytes4__fromStack_library_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "90:9:147",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "101:6:147",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "112:4:147",
+                "type": ""
+              }
+            ],
+            "src": "14:210:147"
+          }
+        ]
+      },
+      "contents": "{\n    { }\n    function abi_encode_tuple_t_bytes4__to_t_bytes4__fromStack_library_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, shl(224, 0xffffffff)))\n    }\n}",
+      "id": 147,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "127:822:29:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "127:822:29:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;156:61;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;223:59;;;:::i;156:61::-;196:20;156:61;:::o;223:59::-;262:19;223:59;:::o;14:210:147:-;-1:-1:-1;;;;;;184:33:147;;;;166:52;;154:2;139:18;;121:103::o",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.7.6;\npragma abicoder v2;\n\nimport \"@gebrid/lib-part/contracts/LibPart.sol\";\n\nlibrary LibOrderDataV3 {\n    bytes4 constant public V3_SELL = bytes4(keccak256(\"V3_SELL\"));\n    bytes4 constant public V3_BUY = bytes4(keccak256(\"V3_BUY\"));\n\n    struct DataV3_SELL {\n        uint payouts;\n        uint originFeeFirst;\n        uint originFeeSecond;\n        uint maxFeesBasePoint;\n        bytes32 marketplaceMarker;\n    }\n\n    struct DataV3_BUY {\n        uint payouts;\n        uint originFeeFirst;\n        uint originFeeSecond;\n        bytes32 marketplaceMarker;\n    }\n\n    function decodeOrderDataV3_SELL(bytes memory data) internal pure returns (DataV3_SELL memory orderData) {\n        orderData = abi.decode(data, (DataV3_SELL));\n    }\n\n    function decodeOrderDataV3_BUY(bytes memory data) internal pure returns (DataV3_BUY memory orderData) {\n        orderData = abi.decode(data, (DataV3_BUY));\n    }\n\n}\n",
+  "sourcePath": "@gebrid/exchange/contracts/libraries/LibOrderDataV3.sol",
+  "ast": {
+    "absolutePath": "@gebrid/exchange/contracts/libraries/LibOrderDataV3.sol",
+    "exportedSymbols": {
+      "LibOrderDataV3": [
+        6470
+      ],
+      "LibPart": [
+        7014
+      ]
+    },
+    "id": 6471,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6397,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:29"
+      },
+      {
+        "id": 6398,
+        "literals": [
+          "abicoder",
+          "v2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "56:19:29"
+      },
+      {
+        "absolutePath": "@gebrid/lib-part/contracts/LibPart.sol",
+        "file": "@gebrid/lib-part/contracts/LibPart.sol",
+        "id": 6399,
+        "nodeType": "ImportDirective",
+        "scope": 6471,
+        "sourceUnit": 7015,
+        "src": "77:48:29",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 6470,
+        "linearizedBaseContracts": [
+          6470
+        ],
+        "name": "LibOrderDataV3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "66c5bb27",
+            "id": 6407,
+            "mutability": "constant",
+            "name": "V3_SELL",
+            "nodeType": "VariableDeclaration",
+            "scope": 6470,
+            "src": "156:61:29",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 6400,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "156:6:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "56335f53454c4c",
+                      "id": 6404,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "206:9:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_2fa3cfd36fc2a11048e46a7dac1916c392731880ba073f2b7f10566b2fd6133e",
+                        "typeString": "literal_string \"V3_SELL\""
+                      },
+                      "value": "V3_SELL"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_2fa3cfd36fc2a11048e46a7dac1916c392731880ba073f2b7f10566b2fd6133e",
+                        "typeString": "literal_string \"V3_SELL\""
+                      }
+                    ],
+                    "id": 6403,
+                    "name": "keccak256",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4294967288,
+                    "src": "196:9:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                      "typeString": "function (bytes memory) pure returns (bytes32)"
+                    }
+                  },
+                  "id": 6405,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "196:20:29",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                ],
+                "id": 6402,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "189:6:29",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes4_$",
+                  "typeString": "type(bytes4)"
+                },
+                "typeName": {
+                  "id": 6401,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:6:29",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 6406,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "189:28:29",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "functionSelector": "fcbf579d",
+            "id": 6415,
+            "mutability": "constant",
+            "name": "V3_BUY",
+            "nodeType": "VariableDeclaration",
+            "scope": 6470,
+            "src": "223:59:29",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 6408,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "223:6:29",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "hexValue": "56335f425559",
+                      "id": 6412,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "string",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "272:8:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_stringliteral_1b18cdf6be079a715471a3705c2d89e1d730066ce14915cb307cc3e4a90c92d4",
+                        "typeString": "literal_string \"V3_BUY\""
+                      },
+                      "value": "V3_BUY"
+                    }
+                  ],
+                  "expression": {
+                    "argumentTypes": [
+                      {
+                        "typeIdentifier": "t_stringliteral_1b18cdf6be079a715471a3705c2d89e1d730066ce14915cb307cc3e4a90c92d4",
+                        "typeString": "literal_string \"V3_BUY\""
+                      }
+                    ],
+                    "id": 6411,
+                    "name": "keccak256",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 4294967288,
+                    "src": "262:9:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                      "typeString": "function (bytes memory) pure returns (bytes32)"
+                    }
+                  },
+                  "id": 6413,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "functionCall",
+                  "lValueRequested": false,
+                  "names": [],
+                  "nodeType": "FunctionCall",
+                  "src": "262:19:29",
+                  "tryCall": false,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                ],
+                "id": 6410,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "255:6:29",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes4_$",
+                  "typeString": "type(bytes4)"
+                },
+                "typeName": {
+                  "id": 6409,
+                  "name": "bytes4",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "255:6:29",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 6414,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "255:27:29",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "LibOrderDataV3.DataV3_SELL",
+            "id": 6426,
+            "members": [
+              {
+                "constant": false,
+                "id": 6417,
+                "mutability": "mutable",
+                "name": "payouts",
+                "nodeType": "VariableDeclaration",
+                "scope": 6426,
+                "src": "318:12:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6416,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "318:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6419,
+                "mutability": "mutable",
+                "name": "originFeeFirst",
+                "nodeType": "VariableDeclaration",
+                "scope": 6426,
+                "src": "340:19:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6418,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "340:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6421,
+                "mutability": "mutable",
+                "name": "originFeeSecond",
+                "nodeType": "VariableDeclaration",
+                "scope": 6426,
+                "src": "369:20:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6420,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "369:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6423,
+                "mutability": "mutable",
+                "name": "maxFeesBasePoint",
+                "nodeType": "VariableDeclaration",
+                "scope": 6426,
+                "src": "399:21:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6422,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "399:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6425,
+                "mutability": "mutable",
+                "name": "marketplaceMarker",
+                "nodeType": "VariableDeclaration",
+                "scope": 6426,
+                "src": "430:25:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 6424,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "430:7:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DataV3_SELL",
+            "nodeType": "StructDefinition",
+            "scope": 6470,
+            "src": "289:173:29",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "LibOrderDataV3.DataV3_BUY",
+            "id": 6435,
+            "members": [
+              {
+                "constant": false,
+                "id": 6428,
+                "mutability": "mutable",
+                "name": "payouts",
+                "nodeType": "VariableDeclaration",
+                "scope": 6435,
+                "src": "496:12:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6427,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "496:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6430,
+                "mutability": "mutable",
+                "name": "originFeeFirst",
+                "nodeType": "VariableDeclaration",
+                "scope": 6435,
+                "src": "518:19:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6429,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "518:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6432,
+                "mutability": "mutable",
+                "name": "originFeeSecond",
+                "nodeType": "VariableDeclaration",
+                "scope": 6435,
+                "src": "547:20:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6431,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "547:4:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 6434,
+                "mutability": "mutable",
+                "name": "marketplaceMarker",
+                "nodeType": "VariableDeclaration",
+                "scope": 6435,
+                "src": "577:25:29",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 6433,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "577:7:29",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "DataV3_BUY",
+            "nodeType": "StructDefinition",
+            "scope": 6470,
+            "src": "468:141:29",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 6451,
+              "nodeType": "Block",
+              "src": "719:60:29",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6449,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6442,
+                      "name": "orderData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6440,
+                      "src": "729:9:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataV3_SELL_$6426_memory_ptr",
+                        "typeString": "struct LibOrderDataV3.DataV3_SELL memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 6445,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6437,
+                          "src": "752:4:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "components": [
+                            {
+                              "id": 6446,
+                              "name": "DataV3_SELL",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6426,
+                              "src": "759:11:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_DataV3_SELL_$6426_storage_ptr_$",
+                                "typeString": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)"
+                              }
+                            }
+                          ],
+                          "id": 6447,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "758:13:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_DataV3_SELL_$6426_storage_ptr_$",
+                            "typeString": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_type$_t_struct$_DataV3_SELL_$6426_storage_ptr_$",
+                            "typeString": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)"
+                          }
+                        ],
+                        "expression": {
+                          "id": 6443,
+                          "name": "abi",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967295,
+                          "src": "741:3:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_abi",
+                            "typeString": "abi"
+                          }
+                        },
+                        "id": 6444,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "decode",
+                        "nodeType": "MemberAccess",
+                        "src": "741:10:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 6448,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "741:31:29",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataV3_SELL_$6426_memory_ptr",
+                        "typeString": "struct LibOrderDataV3.DataV3_SELL memory"
+                      }
+                    },
+                    "src": "729:43:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataV3_SELL_$6426_memory_ptr",
+                      "typeString": "struct LibOrderDataV3.DataV3_SELL memory"
+                    }
+                  },
+                  "id": 6450,
+                  "nodeType": "ExpressionStatement",
+                  "src": "729:43:29"
+                }
+              ]
+            },
+            "id": 6452,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decodeOrderDataV3_SELL",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6437,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6452,
+                  "src": "647:17:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6436,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "647:5:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "646:19:29"
+            },
+            "returnParameters": {
+              "id": 6441,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6440,
+                  "mutability": "mutable",
+                  "name": "orderData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6452,
+                  "src": "689:28:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_DataV3_SELL_$6426_memory_ptr",
+                    "typeString": "struct LibOrderDataV3.DataV3_SELL"
+                  },
+                  "typeName": {
+                    "id": 6439,
+                    "name": "DataV3_SELL",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6426,
+                    "src": "689:11:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataV3_SELL_$6426_storage_ptr",
+                      "typeString": "struct LibOrderDataV3.DataV3_SELL"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "688:30:29"
+            },
+            "scope": 6470,
+            "src": "615:164:29",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 6468,
+              "nodeType": "Block",
+              "src": "887:59:29",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 6466,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 6459,
+                      "name": "orderData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6457,
+                      "src": "897:9:29",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataV3_BUY_$6435_memory_ptr",
+                        "typeString": "struct LibOrderDataV3.DataV3_BUY memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 6462,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6454,
+                          "src": "920:4:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "components": [
+                            {
+                              "id": 6463,
+                              "name": "DataV3_BUY",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 6435,
+                              "src": "927:10:29",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_DataV3_BUY_$6435_storage_ptr_$",
+                                "typeString": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)"
+                              }
+                            }
+                          ],
+                          "id": 6464,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "926:12:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_DataV3_BUY_$6435_storage_ptr_$",
+                            "typeString": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_type$_t_struct$_DataV3_BUY_$6435_storage_ptr_$",
+                            "typeString": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)"
+                          }
+                        ],
+                        "expression": {
+                          "id": 6460,
+                          "name": "abi",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4294967295,
+                          "src": "909:3:29",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_abi",
+                            "typeString": "abi"
+                          }
+                        },
+                        "id": 6461,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "decode",
+                        "nodeType": "MemberAccess",
+                        "src": "909:10:29",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 6465,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "909:30:29",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_DataV3_BUY_$6435_memory_ptr",
+                        "typeString": "struct LibOrderDataV3.DataV3_BUY memory"
+                      }
+                    },
+                    "src": "897:42:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataV3_BUY_$6435_memory_ptr",
+                      "typeString": "struct LibOrderDataV3.DataV3_BUY memory"
+                    }
+                  },
+                  "id": 6467,
+                  "nodeType": "ExpressionStatement",
+                  "src": "897:42:29"
+                }
+              ]
+            },
+            "id": 6469,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decodeOrderDataV3_BUY",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6454,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6469,
+                  "src": "816:17:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 6453,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "816:5:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "815:19:29"
+            },
+            "returnParameters": {
+              "id": 6458,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6457,
+                  "mutability": "mutable",
+                  "name": "orderData",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6469,
+                  "src": "858:27:29",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_DataV3_BUY_$6435_memory_ptr",
+                    "typeString": "struct LibOrderDataV3.DataV3_BUY"
+                  },
+                  "typeName": {
+                    "id": 6456,
+                    "name": "DataV3_BUY",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 6435,
+                    "src": "858:10:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_DataV3_BUY_$6435_storage_ptr",
+                      "typeString": "struct LibOrderDataV3.DataV3_BUY"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "857:29:29"
+            },
+            "scope": 6470,
+            "src": "785:161:29",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6471,
+        "src": "127:822:29"
+      }
+    ],
+    "src": "33:917:29"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "@gebrid/exchange/contracts/libraries/LibOrderDataV3.sol",
+      "exportedSymbols": {
+        "LibOrderDataV3": [
+          6470
+        ],
+        "LibPart": [
+          7014
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 6397,
+        "name": "PragmaDirective",
+        "src": "33:22:29"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "abicoder",
+            "v2"
+          ]
+        },
+        "id": 6398,
+        "name": "PragmaDirective",
+        "src": "56:19:29"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7015,
+          "absolutePath": "@gebrid/lib-part/contracts/LibPart.sol",
+          "file": "@gebrid/lib-part/contracts/LibPart.sol",
+          "scope": 6471,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6399,
+        "name": "ImportDirective",
+        "src": "77:48:29"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6470
+          ],
+          "name": "LibOrderDataV3",
+          "scope": 6471
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "66c5bb27",
+              "mutability": "constant",
+              "name": "V3_SELL",
+              "scope": 6470,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes4",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes4",
+                  "type": "bytes4"
+                },
+                "id": 6400,
+                "name": "ElementaryTypeName",
+                "src": "156:6:29"
+              },
+              {
+                "attributes": {
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": false,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "tryCall": false,
+                  "type": "bytes4",
+                  "type_conversion": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "type": "type(bytes4)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes4"
+                        },
+                        "id": 6401,
+                        "name": "ElementaryTypeName",
+                        "src": "189:6:29"
+                      }
+                    ],
+                    "id": 6402,
+                    "name": "ElementaryTypeNameExpression",
+                    "src": "189:6:29"
+                  },
+                  {
+                    "attributes": {
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "isStructConstructorCall": false,
+                      "lValueRequested": false,
+                      "names": [
+                        null
+                      ],
+                      "tryCall": false,
+                      "type": "bytes32",
+                      "type_conversion": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_2fa3cfd36fc2a11048e46a7dac1916c392731880ba073f2b7f10566b2fd6133e",
+                              "typeString": "literal_string \"V3_SELL\""
+                            }
+                          ],
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 4294967288,
+                          "type": "function (bytes memory) pure returns (bytes32)",
+                          "value": "keccak256"
+                        },
+                        "id": 6403,
+                        "name": "Identifier",
+                        "src": "196:9:29"
+                      },
+                      {
+                        "attributes": {
+                          "hexvalue": "56335f53454c4c",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "token": "string",
+                          "type": "literal_string \"V3_SELL\"",
+                          "value": "V3_SELL"
+                        },
+                        "id": 6404,
+                        "name": "Literal",
+                        "src": "206:9:29"
+                      }
+                    ],
+                    "id": 6405,
+                    "name": "FunctionCall",
+                    "src": "196:20:29"
+                  }
+                ],
+                "id": 6406,
+                "name": "FunctionCall",
+                "src": "189:28:29"
+              }
+            ],
+            "id": 6407,
+            "name": "VariableDeclaration",
+            "src": "156:61:29"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "functionSelector": "fcbf579d",
+              "mutability": "constant",
+              "name": "V3_BUY",
+              "scope": 6470,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bytes4",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bytes4",
+                  "type": "bytes4"
+                },
+                "id": 6408,
+                "name": "ElementaryTypeName",
+                "src": "223:6:29"
+              },
+              {
+                "attributes": {
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": false,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "tryCall": false,
+                  "type": "bytes4",
+                  "type_conversion": true
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "type": "type(bytes4)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes4"
+                        },
+                        "id": 6409,
+                        "name": "ElementaryTypeName",
+                        "src": "255:6:29"
+                      }
+                    ],
+                    "id": 6410,
+                    "name": "ElementaryTypeNameExpression",
+                    "src": "255:6:29"
+                  },
+                  {
+                    "attributes": {
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "isStructConstructorCall": false,
+                      "lValueRequested": false,
+                      "names": [
+                        null
+                      ],
+                      "tryCall": false,
+                      "type": "bytes32",
+                      "type_conversion": false
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_1b18cdf6be079a715471a3705c2d89e1d730066ce14915cb307cc3e4a90c92d4",
+                              "typeString": "literal_string \"V3_BUY\""
+                            }
+                          ],
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 4294967288,
+                          "type": "function (bytes memory) pure returns (bytes32)",
+                          "value": "keccak256"
+                        },
+                        "id": 6411,
+                        "name": "Identifier",
+                        "src": "262:9:29"
+                      },
+                      {
+                        "attributes": {
+                          "hexvalue": "56335f425559",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "token": "string",
+                          "type": "literal_string \"V3_BUY\"",
+                          "value": "V3_BUY"
+                        },
+                        "id": 6412,
+                        "name": "Literal",
+                        "src": "272:8:29"
+                      }
+                    ],
+                    "id": 6413,
+                    "name": "FunctionCall",
+                    "src": "262:19:29"
+                  }
+                ],
+                "id": 6414,
+                "name": "FunctionCall",
+                "src": "255:27:29"
+              }
+            ],
+            "id": 6415,
+            "name": "VariableDeclaration",
+            "src": "223:59:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "LibOrderDataV3.DataV3_SELL",
+              "name": "DataV3_SELL",
+              "scope": 6470,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "payouts",
+                  "scope": 6426,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6416,
+                    "name": "ElementaryTypeName",
+                    "src": "318:4:29"
+                  }
+                ],
+                "id": 6417,
+                "name": "VariableDeclaration",
+                "src": "318:12:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "originFeeFirst",
+                  "scope": 6426,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6418,
+                    "name": "ElementaryTypeName",
+                    "src": "340:4:29"
+                  }
+                ],
+                "id": 6419,
+                "name": "VariableDeclaration",
+                "src": "340:19:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "originFeeSecond",
+                  "scope": 6426,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6420,
+                    "name": "ElementaryTypeName",
+                    "src": "369:4:29"
+                  }
+                ],
+                "id": 6421,
+                "name": "VariableDeclaration",
+                "src": "369:20:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "maxFeesBasePoint",
+                  "scope": 6426,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6422,
+                    "name": "ElementaryTypeName",
+                    "src": "399:4:29"
+                  }
+                ],
+                "id": 6423,
+                "name": "VariableDeclaration",
+                "src": "399:21:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "marketplaceMarker",
+                  "scope": 6426,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 6424,
+                    "name": "ElementaryTypeName",
+                    "src": "430:7:29"
+                  }
+                ],
+                "id": 6425,
+                "name": "VariableDeclaration",
+                "src": "430:25:29"
+              }
+            ],
+            "id": 6426,
+            "name": "StructDefinition",
+            "src": "289:173:29"
+          },
+          {
+            "attributes": {
+              "canonicalName": "LibOrderDataV3.DataV3_BUY",
+              "name": "DataV3_BUY",
+              "scope": 6470,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "payouts",
+                  "scope": 6435,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6427,
+                    "name": "ElementaryTypeName",
+                    "src": "496:4:29"
+                  }
+                ],
+                "id": 6428,
+                "name": "VariableDeclaration",
+                "src": "496:12:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "originFeeFirst",
+                  "scope": 6435,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6429,
+                    "name": "ElementaryTypeName",
+                    "src": "518:4:29"
+                  }
+                ],
+                "id": 6430,
+                "name": "VariableDeclaration",
+                "src": "518:19:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "originFeeSecond",
+                  "scope": 6435,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6431,
+                    "name": "ElementaryTypeName",
+                    "src": "547:4:29"
+                  }
+                ],
+                "id": 6432,
+                "name": "VariableDeclaration",
+                "src": "547:20:29"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "marketplaceMarker",
+                  "scope": 6435,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 6433,
+                    "name": "ElementaryTypeName",
+                    "src": "577:7:29"
+                  }
+                ],
+                "id": 6434,
+                "name": "VariableDeclaration",
+                "src": "577:25:29"
+              }
+            ],
+            "id": 6435,
+            "name": "StructDefinition",
+            "src": "468:141:29"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "decodeOrderDataV3_SELL",
+              "scope": 6470,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "scope": 6452,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 6436,
+                        "name": "ElementaryTypeName",
+                        "src": "647:5:29"
+                      }
+                    ],
+                    "id": 6437,
+                    "name": "VariableDeclaration",
+                    "src": "647:17:29"
+                  }
+                ],
+                "id": 6438,
+                "name": "ParameterList",
+                "src": "646:19:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "orderData",
+                      "scope": 6452,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct LibOrderDataV3.DataV3_SELL",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "DataV3_SELL",
+                          "referencedDeclaration": 6426,
+                          "type": "struct LibOrderDataV3.DataV3_SELL"
+                        },
+                        "id": 6439,
+                        "name": "UserDefinedTypeName",
+                        "src": "689:11:29"
+                      }
+                    ],
+                    "id": 6440,
+                    "name": "VariableDeclaration",
+                    "src": "689:28:29"
+                  }
+                ],
+                "id": 6441,
+                "name": "ParameterList",
+                "src": "688:30:29"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct LibOrderDataV3.DataV3_SELL memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6440,
+                              "type": "struct LibOrderDataV3.DataV3_SELL memory",
+                              "value": "orderData"
+                            },
+                            "id": 6442,
+                            "name": "Identifier",
+                            "src": "729:9:29"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "struct LibOrderDataV3.DataV3_SELL memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bytes_memory_ptr",
+                                      "typeString": "bytes memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_type$_t_struct$_DataV3_SELL_$6426_storage_ptr_$",
+                                      "typeString": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "decode",
+                                  "type": "function () pure"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967295,
+                                      "type": "abi",
+                                      "value": "abi"
+                                    },
+                                    "id": 6443,
+                                    "name": "Identifier",
+                                    "src": "741:3:29"
+                                  }
+                                ],
+                                "id": 6444,
+                                "name": "MemberAccess",
+                                "src": "741:10:29"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6437,
+                                  "type": "bytes memory",
+                                  "value": "data"
+                                },
+                                "id": 6445,
+                                "name": "Identifier",
+                                "src": "752:4:29"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6426,
+                                      "type": "type(struct LibOrderDataV3.DataV3_SELL storage pointer)",
+                                      "value": "DataV3_SELL"
+                                    },
+                                    "id": 6446,
+                                    "name": "Identifier",
+                                    "src": "759:11:29"
+                                  }
+                                ],
+                                "id": 6447,
+                                "name": "TupleExpression",
+                                "src": "758:13:29"
+                              }
+                            ],
+                            "id": 6448,
+                            "name": "FunctionCall",
+                            "src": "741:31:29"
+                          }
+                        ],
+                        "id": 6449,
+                        "name": "Assignment",
+                        "src": "729:43:29"
+                      }
+                    ],
+                    "id": 6450,
+                    "name": "ExpressionStatement",
+                    "src": "729:43:29"
+                  }
+                ],
+                "id": 6451,
+                "name": "Block",
+                "src": "719:60:29"
+              }
+            ],
+            "id": 6452,
+            "name": "FunctionDefinition",
+            "src": "615:164:29"
+          },
+          {
+            "attributes": {
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "decodeOrderDataV3_BUY",
+              "scope": 6470,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "scope": 6469,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "bytes",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 6453,
+                        "name": "ElementaryTypeName",
+                        "src": "816:5:29"
+                      }
+                    ],
+                    "id": 6454,
+                    "name": "VariableDeclaration",
+                    "src": "816:17:29"
+                  }
+                ],
+                "id": 6455,
+                "name": "ParameterList",
+                "src": "815:19:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "orderData",
+                      "scope": 6469,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct LibOrderDataV3.DataV3_BUY",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "DataV3_BUY",
+                          "referencedDeclaration": 6435,
+                          "type": "struct LibOrderDataV3.DataV3_BUY"
+                        },
+                        "id": 6456,
+                        "name": "UserDefinedTypeName",
+                        "src": "858:10:29"
+                      }
+                    ],
+                    "id": 6457,
+                    "name": "VariableDeclaration",
+                    "src": "858:27:29"
+                  }
+                ],
+                "id": 6458,
+                "name": "ParameterList",
+                "src": "857:29:29"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct LibOrderDataV3.DataV3_BUY memory"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6457,
+                              "type": "struct LibOrderDataV3.DataV3_BUY memory",
+                              "value": "orderData"
+                            },
+                            "id": 6459,
+                            "name": "Identifier",
+                            "src": "897:9:29"
+                          },
+                          {
+                            "attributes": {
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "tryCall": false,
+                              "type": "struct LibOrderDataV3.DataV3_BUY memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bytes_memory_ptr",
+                                      "typeString": "bytes memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_type$_t_struct$_DataV3_BUY_$6435_storage_ptr_$",
+                                      "typeString": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "decode",
+                                  "type": "function () pure"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4294967295,
+                                      "type": "abi",
+                                      "value": "abi"
+                                    },
+                                    "id": 6460,
+                                    "name": "Identifier",
+                                    "src": "909:3:29"
+                                  }
+                                ],
+                                "id": 6461,
+                                "name": "MemberAccess",
+                                "src": "909:10:29"
+                              },
+                              {
+                                "attributes": {
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6454,
+                                  "type": "bytes memory",
+                                  "value": "data"
+                                },
+                                "id": 6462,
+                                "name": "Identifier",
+                                "src": "920:4:29"
+                              },
+                              {
+                                "attributes": {
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 6435,
+                                      "type": "type(struct LibOrderDataV3.DataV3_BUY storage pointer)",
+                                      "value": "DataV3_BUY"
+                                    },
+                                    "id": 6463,
+                                    "name": "Identifier",
+                                    "src": "927:10:29"
+                                  }
+                                ],
+                                "id": 6464,
+                                "name": "TupleExpression",
+                                "src": "926:12:29"
+                              }
+                            ],
+                            "id": 6465,
+                            "name": "FunctionCall",
+                            "src": "909:30:29"
+                          }
+                        ],
+                        "id": 6466,
+                        "name": "Assignment",
+                        "src": "897:42:29"
+                      }
+                    ],
+                    "id": 6467,
+                    "name": "ExpressionStatement",
+                    "src": "897:42:29"
+                  }
+                ],
+                "id": 6468,
+                "name": "Block",
+                "src": "887:59:29"
+              }
+            ],
+            "id": 6469,
+            "name": "FunctionDefinition",
+            "src": "785:161:29"
+          }
+        ],
+        "id": 6470,
+        "name": "ContractDefinition",
+        "src": "127:822:29"
+      }
+    ],
+    "id": 6471,
+    "name": "SourceUnit",
+    "src": "33:917:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-10-29T10:34:29.100Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

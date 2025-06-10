@@ -1,0 +1,26 @@
+{
+  "name": "@gebrid/deploy",
+  "version": "0.0.2",
+  "description": "package with all migrations to deploy other packages",
+  "access": "public",
+  "license": "MIT",
+  "dependencies": {
+    "@gebrid/auction": "^0.1.1",
+    "@gebrid/exchange": "^0.4.1",
+    "@gebrid/royalties-registry": "^0.4.1",
+    "@gebrid/test": "^0.0.3",
+    "@gebrid/tokens": "^0.7.1",
+    "@gebrid/transfer-proxy": "^0.3.1",
+    "@openzeppelin/contracts-upgradeable": "3.4.0"
+  },
+  "devDependencies": {
+    "truffle-contract-size": "2.0.1",
+    "truffle-plugin-verify": "0.5.28"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "verifyExchnageV2MetaMumbai": "truffle run verify ExchangeMetaV2 --network polygon_mumbai"
+  }
+}
